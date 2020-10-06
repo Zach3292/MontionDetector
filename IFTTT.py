@@ -11,7 +11,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
 # Set les pins
-pinpir = 17
+pinpir = 26
 
 # Set les pins en input
 GPIO.setup(pinpir, GPIO.IN)
