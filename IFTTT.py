@@ -42,7 +42,7 @@ try:
             print("Motion detected!")
 
             # Make POST request to IFTTT trigger
-            r = requests.post('https://maker.ifttt.com/trigger/YOUR_EVENT_NAME/with/key/YOUR_KEY_HERE', params={"value1":"none","value2":"none","value3":"none"})
+            r = requests.post('https://maker.ifttt.com/trigger/intruder_detected/with/key/EES-08VDUFYQYr-OsevEv', params={"value1":"none","value2":"none","value3":"none"})
 
             
             previousstate = 1
