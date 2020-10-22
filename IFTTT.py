@@ -3,6 +3,7 @@
 import RPi.GPIO as GPIO
 import time
 import requests
+import urllib
 
 # Set le mode des GPIO
 GPIO.setmode(GPIO.BCM)
@@ -42,9 +43,8 @@ try:
             print("Motion detected!")
 
             # Make POST request to IFTTT trigger
-            r = requests.post('https://maker.ifttt.com/trigger/intruder_detected/with/key/EES-08VDUFYQYr-OsevEv', params={"value1":"none","value2":"none","value3":"none"})
-
-            
+            urllib.request.urlopen('https://maker.ifttt.com/trigger/intruder_detected/with/key/EES-08VDUFYQYr-OsevEv')
+#	    subprocess.run('curl -X POST https://maker.ifttt.com/trigger/intruder_detected/with/key/EES-08VDUFYQYr-OsevEv')
             previousstate = 1
 
             #Wait 120 seconds before looping again
